@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Puntos de la  Matriz</title>
+</head>
+<body>
+  <hr>
+  <h1>Puntos de toda la matriz ejercicio</h1> </hr>
+  <script>
+// Función para calcular el puntaje total
+function calcularPuntaje(matriz) { 
+   let puntaje = 0;
+for (let i = 0; i < matriz.length; i++) {
+ for (let j = 0; j < matriz[i].length; j++) {
+  const numero = matriz[i][j];
+          
+// Suma 1 punto por cada número par
+if (numero % 2 === 0) {
+puntaje += 1;}
+          
+// Suma 3 puntos por cada número impar
+if (numero % 2 !== 0) { puntaje += 3;}
+          
+// Suma 5 puntos por cada vez que aparece el número 5
+if (numero === 5) {puntaje += 5;} } }
+return puntaje;
+ }// Ejemplo de matriz
+ const matriz = [
+
+     [2, 4, 5],
+     [1, 3, 5],
+     [5, 8, 9]];
+
+
+const puntajeTotal = calcularPuntaje(matriz);
+// mostrar el puntaje en la página
+document.write(`Puntaje total: ${puntajeTotal}`);
+</script>
+</body>
+</html>
